@@ -1,7 +1,5 @@
 :: Windows
 
-echo "================= begin ==================="
-
 :: Isolate the build
 mkdir build
 cd build
@@ -9,6 +7,7 @@ if errorlevel 1 exit 1
 
 :: Generate the build files
 cmake -G "Ninja" ^
+      %CMAKE_ARGS% ^
       -DCMAKE_INSTALL_PREFIX=%LIBRARY_PREFIX% ^
       -DBUILD_TESTS=OFF ^
       -DGHC_FILESYSTEM_BUILD_TESTING=OFF ^
