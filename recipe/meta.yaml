@@ -23,6 +23,7 @@ requirements:
     - ninja
 
 test:
+  # NOTE: Additional testing is performed in the build scripts (`build.sh` and `bld.bat`).
   commands:
     - test -f ${PREFIX}/include/ghc/filesystem.hpp  # [unix]
     - test -f ${PREFIX}/lib/cmake/ghc_filesystem/ghc_filesystem-config.cmake  # [unix]
